@@ -1,0 +1,8 @@
+<launch>
+  <arg name="model" />
+  <param name="robot_description" textfile="$(find rviz_robot_model)/src/urdf/model.xacro" />
+  <param name="use_gui" value="true"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>
