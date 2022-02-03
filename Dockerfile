@@ -22,4 +22,5 @@ RUN git clone https://github.com/lschirmbrand/DHBW_rviz_container.git
 RUN mv ./DHBW_rviz_container ./rviz_launch
 
 WORKDIR /remotecontainer_ws
-RUN catkin_make
+RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && \
+    catkin_make_isolated"
